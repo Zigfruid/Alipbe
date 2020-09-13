@@ -14,12 +14,15 @@
         android:id="@+id/ll1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@id/ll2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        app:layout_constraintVertical_chainStyle="packed">
 
         <ImageView
             android:layout_width="70dp"
@@ -83,11 +86,11 @@
         android:id="@+id/ll2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toTopOf="@id/ll3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ll1">
+        app:layout_constraintTop_toBottomOf="@id/ll1"
+        app:layout_constraintVertical_chainStyle="packed">
 
         <ImageView
             android:layout_width="70dp"
@@ -150,11 +153,13 @@
         android:id="@+id/ll3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@id/ll4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ll2">
+        app:layout_constraintTop_toBottomOf="@id/ll2"
+        app:layout_constraintVertical_chainStyle="packed">
 
         <ImageView
             android:layout_width="70dp"
@@ -217,12 +222,13 @@
         android:id="@+id/ll4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="14dp"
         android:layout_marginStart="16dp"
+        android:layout_marginEnd="14dp"
+        app:layout_constraintBottom_toTopOf="@id/ll5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ll3">
-
+        app:layout_constraintTop_toBottomOf="@id/ll3"
+        app:layout_constraintVertical_chainStyle="packed">
 
         <ImageView
             android:layout_width="70dp"
@@ -244,7 +250,6 @@
             android:layout_marginEnd="8dp"
             android:gravity="center"
             android:src="@drawable/uyrek" />
-
 
         <ImageView
             android:layout_width="70dp"
@@ -275,7 +280,7 @@
             android:src="@drawable/zamark" />
 
         <ImageView
-            android:layout_width="75dp"
+            android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
@@ -286,11 +291,13 @@
         android:id="@+id/ll5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ll4">
+        app:layout_constraintTop_toBottomOf="@id/ll4"
+        app:layout_constraintVertical_chainStyle="packed">
 
         <ImageView
             android:layout_width="70dp"
@@ -300,12 +307,10 @@
             android:src="@drawable/circul" />
 
         <ImageView
-            android:layout_width="80dp"
+            android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
             android:src="@drawable/chemodan" />
     </LinearLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
