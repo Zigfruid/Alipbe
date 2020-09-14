@@ -14,9 +14,7 @@
         android:id="@+id/ll1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
         app:layout_constraintBottom_toTopOf="@id/ll2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,58 +23,66 @@
         app:layout_constraintVertical_chainStyle="packed">
 
         <ImageView
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
+            android:id="@+id/letterAlma"
             android:src="@drawable/alma"
             android:textColor="@android:color/background_dark" />
 
         <ImageView
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
+            android:id="@+id/letterAtkonshek"
             android:gravity="center"
             android:src="@drawable/atkonshek" />
 
         <ImageView
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
+            android:id="@+id/letterBaliq"
             android:src="@drawable/baliq" />
 
         <ImageView
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
+            android:id="@+id/letterDuwtar"
             android:src="@drawable/duwtar" />
 
         <ImageView
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
+            android:id="@+id/letterEtik"
             android:gravity="center"
             android:src="@drawable/etik" />
 
         <ImageView
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="70dp"
+            android:id="@+id/letterFontan"
             android:layout_marginEnd="8dp"
             android:gravity="center"
             android:src="@drawable/fontan" />
 
         <ImageView
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="70dp"
+            android:id="@+id/letterGul"
             android:layout_marginEnd="8dp"
             android:gravity="center"
             android:src="@drawable/gul" />
 
         <ImageView
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="70dp"
+            android:id="@+id/letterGarbiz"
             android:layout_marginEnd="8dp"
             android:gravity="center"
             android:src="@drawable/garbiz" />
@@ -93,57 +99,65 @@
         app:layout_constraintVertical_chainStyle="packed">
 
         <ImageView
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
+            android:id="@+id/letterHakke"
             android:gravity="center"
             android:src="@drawable/hakke" />
 
         <ImageView
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="70dp"
+            android:id="@+id/letterXat"
             android:layout_marginEnd="8dp"
             android:gravity="center"
             android:src="@drawable/xat" />
 
         <ImageView
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="70dp"
+            android:id="@+id/letterIlaq"
             android:layout_marginEnd="8dp"
             android:gravity="center"
             android:src="@drawable/ilaq" />
 
         <ImageView
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="70dp"
+            android:id="@+id/letterIyne"
             android:layout_marginEnd="8dp"
             android:gravity="center"
             android:src="@drawable/iyne" />
 
         <ImageView
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="70dp"
+            android:id="@+id/letterJuzim"
             android:layout_marginEnd="8dp"
             android:gravity="center"
             android:src="@drawable/juzim" />
 
         <ImageView
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="70dp"
+            android:id="@+id/letterKitap"
             android:layout_marginEnd="8dp"
             android:gravity="center"
             android:src="@drawable/kitap" />
 
         <ImageView
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="70dp"
+            android:id="@+id/letterQalem"
             android:layout_marginEnd="8dp"
             android:gravity="center"
             android:src="@drawable/qalem" />
 
         <ImageView
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="70dp"
+            android:id="@+id/letterLagen"
             android:layout_marginEnd="8dp"
             android:gravity="center"
             android:src="@drawable/lagen" />
@@ -162,59 +176,67 @@
         app:layout_constraintVertical_chainStyle="packed">
 
         <ImageView
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="70dp"
+            android:id="@+id/letterMuz"
             android:layout_marginEnd="8dp"
             android:gravity="center"
             android:src="@drawable/muz" />
 
         <ImageView
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="70dp"
+            android:id="@+id/letterNan"
             android:layout_marginEnd="8dp"
             android:gravity="center"
             android:src="@drawable/nan" />
 
         <ImageView
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="70dp"
+            android:id="@+id/letterQoniraw"
             android:layout_marginEnd="8dp"
             android:gravity="center"
             android:src="@drawable/qoniraw" />
 
         <ImageView
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="70dp"
+            android:id="@+id/letterOraq"
             android:layout_marginEnd="8dp"
             android:gravity="center"
             android:src="@drawable/oraq" />
 
         <ImageView
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
+            android:id="@+id/letterOrmekshi"
             android:src="@drawable/ormekshi" />
 
         <ImageView
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
+            android:id="@+id/letterPiyaz"
             android:gravity="center"
             android:src="@drawable/piyaz" />
 
         <ImageView
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="70dp"
+            android:id="@+id/letterRadio"
             android:layout_marginEnd="8dp"
             android:gravity="center"
             android:src="@drawable/radio" />
 
         <ImageView
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
+            android:id="@+id/letterSabin"
             android:src="@drawable/sabin" />
     </LinearLayout>
 
@@ -231,59 +253,67 @@
         app:layout_constraintVertical_chainStyle="packed">
 
         <ImageView
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="70dp"
+            android:id="@+id/letterTarezi"
             android:layout_marginEnd="8dp"
             android:gravity="center"
             android:src="@drawable/tarezi" />
 
         <ImageView
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="70dp"
+            android:id="@+id/letterUn"
             android:layout_marginEnd="8dp"
             android:gravity="center"
             android:src="@drawable/un" />
 
         <ImageView
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
+            android:id="@+id/letterUyrek"
             android:src="@drawable/uyrek" />
 
         <ImageView
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
+            android:id="@+id/letterVertolyot"
             android:src="@drawable/vertolyot" />
 
         <ImageView
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
+            android:id="@+id/letterWaqit"
             android:src="@drawable/waqit" />
 
         <ImageView
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
+            android:id="@+id/letterYolka"
             android:src="@drawable/yolka" />
 
         <ImageView
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
+            android:id="@+id/letterZamark"
             android:src="@drawable/zamark" />
 
         <ImageView
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
+            android:id="@+id/letterShar"
             android:src="@drawable/shar" />
     </LinearLayout>
 
@@ -300,17 +330,19 @@
         app:layout_constraintVertical_chainStyle="packed">
 
         <ImageView
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
+            android:id="@+id/letterCircul"
             android:src="@drawable/circul" />
 
         <ImageView
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
+            android:id="@+id/letterChemodan"
             android:src="@drawable/chemodan" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

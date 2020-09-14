@@ -18,5 +18,244 @@
     <fragment
         android:id="@+id/lettersFragment"
         android:name="com.example.alipbe.letters.LettersFragment"
-        android:label="LettersFragment" />
+        android:label="LettersFragment" >
+        <action
+            android:id="@+id/action_lettersFragment_to_letterA2"
+            app:destination="@id/letterA2" />
+        <action
+            android:id="@+id/action_lettersFragment_to_letterAt"
+            app:destination="@id/letterAt" />
+        <action
+            android:id="@+id/action_lettersFragment_to_letterB"
+            app:destination="@id/letterB" />
+        <action
+            android:id="@+id/action_lettersFragment_to_letterD"
+            app:destination="@id/letterD" />
+        <action
+            android:id="@+id/action_lettersFragment_to_letterF"
+            app:destination="@id/letterF" />
+        <action
+            android:id="@+id/action_lettersFragment_to_letterGa"
+            app:destination="@id/letterGa" />
+        <action
+            android:id="@+id/action_lettersFragment_to_letterG"
+            app:destination="@id/letterG" />
+        <action
+            android:id="@+id/action_lettersFragment_to_letterE"
+            app:destination="@id/letterE" />
+        <action
+            android:id="@+id/action_lettersFragment_to_letterH"
+            app:destination="@id/letterH" />
+        <action
+            android:id="@+id/action_lettersFragment_to_letterX"
+            app:destination="@id/letterX" />
+        <action
+            android:id="@+id/action_lettersFragment_to_letterIl"
+            app:destination="@id/letterIl" />
+        <action
+            android:id="@+id/action_lettersFragment_to_letterIy"
+            app:destination="@id/letterIy" />
+        <action
+            android:id="@+id/action_lettersFragment_to_letterJ"
+            app:destination="@id/letterJ" />
+        <action
+            android:id="@+id/action_lettersFragment_to_letterK"
+            app:destination="@id/letterK" />
+        <action
+            android:id="@+id/action_lettersFragment_to_letterQ"
+            app:destination="@id/letterQ" />
+        <action
+            android:id="@+id/action_lettersFragment_to_letterL"
+            app:destination="@id/letterL" />
+        <action
+            android:id="@+id/action_lettersFragment_to_letterM"
+            app:destination="@id/letterM" />
+        <action
+            android:id="@+id/action_lettersFragment_to_letterN"
+            app:destination="@id/letterN" />
+        <action
+            android:id="@+id/action_lettersFragment_to_letterQoniraw2"
+            app:destination="@id/letterQoniraw2" />
+        <action
+            android:id="@+id/action_lettersFragment_to_letterO"
+            app:destination="@id/letterO" />
+        <action
+            android:id="@+id/action_lettersFragment_to_letterOrmek"
+            app:destination="@id/letterOrmek" />
+        <action
+            android:id="@+id/action_lettersFragment_to_letterP"
+            app:destination="@id/letterP" />
+        <action
+            android:id="@+id/action_lettersFragment_to_letterR"
+            app:destination="@id/letterR" />
+        <action
+            android:id="@+id/action_lettersFragment_to_letterS"
+            app:destination="@id/letterS" />
+        <action
+            android:id="@+id/action_lettersFragment_to_letterY"
+            app:destination="@id/letterY" />
+        <action
+            android:id="@+id/action_lettersFragment_to_letterV"
+            app:destination="@id/letterV" />
+        <action
+            android:id="@+id/action_lettersFragment_to_letterW"
+            app:destination="@id/letterW" />
+        <action
+            android:id="@+id/action_lettersFragment_to_letterT"
+            app:destination="@id/letterT" />
+        <action
+            android:id="@+id/action_lettersFragment_to_letterZ"
+            app:destination="@id/letterZ" />
+        <action
+            android:id="@+id/action_lettersFragment_to_letterCh"
+            app:destination="@id/letterCh" />
+        <action
+            android:id="@+id/action_lettersFragment_to_letterSh"
+            app:destination="@id/letterSh" />
+        <action
+            android:id="@+id/action_lettersFragment_to_letterC"
+            app:destination="@id/letterC" />
+        <action
+            android:id="@+id/action_lettersFragment_to_letterUy"
+            app:destination="@id/letterUy" />
+        <action
+            android:id="@+id/action_lettersFragment_to_letterU"
+            app:destination="@id/letterU" />
+    </fragment>
+    <fragment
+        android:id="@+id/letterA2"
+        android:name="com.example.alipbe.letters.alphabet.LetterA"
+        android:label="LetterA" />
+    <fragment
+        android:id="@+id/letterAt"
+        android:name="com.example.alipbe.letters.alphabet.LetterAt"
+        android:label="LetterAt" />
+    <fragment
+        android:id="@+id/letterB"
+        android:name="com.example.alipbe.letters.alphabet.LetterB"
+        android:label="LetterB" />
+    <fragment
+        android:id="@+id/letterD"
+        android:name="com.example.alipbe.letters.alphabet.LetterD"
+        android:label="LetterD" />
+    <fragment
+        android:id="@+id/letterF"
+        android:name="com.example.alipbe.letters.alphabet.LetterF"
+        android:label="LetterF" />
+    <fragment
+        android:id="@+id/letterGa"
+        android:name="com.example.alipbe.letters.alphabet.LetterGa"
+        android:label="LetterGa" />
+    <fragment
+        android:id="@+id/letterG"
+        android:name="com.example.alipbe.letters.alphabet.LetterG"
+        android:label="LetterG" />
+    <fragment
+        android:id="@+id/letterE"
+        android:name="com.example.alipbe.letters.alphabet.LetterE"
+        android:label="LetterE" />
+    <fragment
+        android:id="@+id/letterH"
+        android:name="com.example.alipbe.letters.alphabet.LetterH"
+        android:label="LetterH" />
+    <fragment
+        android:id="@+id/letterX"
+        android:name="com.example.alipbe.letters.alphabet.LetterX"
+        android:label="LetterX" />
+    <fragment
+        android:id="@+id/letterIl"
+        android:name="com.example.alipbe.letters.alphabet.LetterIl"
+        android:label="LetterIl" />
+    <fragment
+        android:id="@+id/letterIy"
+        android:name="com.example.alipbe.letters.alphabet.LetterIy"
+        android:label="LetterIy" />
+    <fragment
+        android:id="@+id/letterJ"
+        android:name="com.example.alipbe.letters.alphabet.LetterJ"
+        android:label="LetterJ" />
+    <fragment
+        android:id="@+id/letterK"
+        android:name="com.example.alipbe.letters.alphabet.LetterK"
+        android:label="LetterK" />
+    <fragment
+        android:id="@+id/letterL"
+        android:name="com.example.alipbe.letters.alphabet.LetterL"
+        android:label="LetterL" />
+    <fragment
+        android:id="@+id/letterQ"
+        android:name="com.example.alipbe.letters.alphabet.LetterQ"
+        android:label="LetterQ" />
+    <fragment
+        android:id="@+id/letterM"
+        android:name="com.example.alipbe.letters.alphabet.LetterM"
+        android:label="LetterM" />
+    <fragment
+        android:id="@+id/letterN"
+        android:name="com.example.alipbe.letters.alphabet.LetterN"
+        android:label="LetterN" />
+    <fragment
+        android:id="@+id/letterQoniraw2"
+        android:name="com.example.alipbe.letters.alphabet.LetterQoniraw"
+        android:label="LetterQoniraw" />
+    <fragment
+        android:id="@+id/letterO"
+        android:name="com.example.alipbe.letters.alphabet.LetterO"
+        android:label="LetterO" />
+    <fragment
+        android:id="@+id/letterOrmek"
+        android:name="com.example.alipbe.letters.alphabet.LetterOrmek"
+        android:label="LetterOrmek" />
+    <fragment
+        android:id="@+id/letterP"
+        android:name="com.example.alipbe.letters.alphabet.LetterP"
+        android:label="LetterP" />
+    <fragment
+        android:id="@+id/letterR"
+        android:name="com.example.alipbe.letters.alphabet.LetterR"
+        android:label="LetterR" />
+    <fragment
+        android:id="@+id/letterC"
+        android:name="com.example.alipbe.letters.alphabet.LetterC"
+        android:label="LetterC" />
+    <fragment
+        android:id="@+id/letterCh"
+        android:name="com.example.alipbe.letters.alphabet.LetterCh"
+        android:label="LetterCh" />
+    <fragment
+        android:id="@+id/letterS"
+        android:name="com.example.alipbe.letters.alphabet.LetterS"
+        android:label="LetterS" />
+    <fragment
+        android:id="@+id/letterSh"
+        android:name="com.example.alipbe.letters.alphabet.LetterSh"
+        android:label="LetterSh" />
+    <fragment
+        android:id="@+id/letterT"
+        android:name="com.example.alipbe.letters.alphabet.LetterT"
+        android:label="LetterT" />
+    <fragment
+        android:id="@+id/letterU"
+        android:name="com.example.alipbe.letters.alphabet.LetterU"
+        android:label="LetterU" />
+    <fragment
+        android:id="@+id/letterUy"
+        android:name="com.example.alipbe.letters.alphabet.LetterUy"
+        android:label="LetterUy" />
+    <fragment
+        android:id="@+id/letterV"
+        android:name="com.example.alipbe.letters.alphabet.LetterV"
+        android:label="LetterV" />
+    <fragment
+        android:id="@+id/letterW"
+        android:name="com.example.alipbe.letters.alphabet.LetterW"
+        android:label="LetterW" />
+    <fragment
+        android:id="@+id/letterY"
+        android:name="com.example.alipbe.letters.alphabet.LetterY"
+        android:label="LetterY" />
+    <fragment
+        android:id="@+id/letterZ"
+        android:name="com.example.alipbe.letters.alphabet.LetterZ"
+        android:label="LetterZ" />
 </navigation>
