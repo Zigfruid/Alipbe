@@ -8,152 +8,51 @@ import androidx.navigation.Navigation
 import com.example.alipbe.R
 import kotlinx.android.synthetic.main.fragment_letters.*
 
-class LettersFragment: Fragment(R.layout.fragment_letters) {
+class LettersFragment : Fragment(R.layout.fragment_letters), View.OnClickListener {
 
     private lateinit var navController: NavController
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         navController = Navigation.findNavController(view)
+        letterAlma.setOnClickListener(this)
+        letterAtkonshek.setOnClickListener(this)
+        letterBaliq.setOnClickListener(this)
+        letterDuwtar.setOnClickListener(this)
+        letterEtik.setOnClickListener(this)
+        letterFontan.setOnClickListener(this)
+        letterGul.setOnClickListener(this)
+        letterGarbiz.setOnClickListener(this)
+        letterHakke.setOnClickListener(this)
+        letterXat.setOnClickListener(this)
+        letterIlaq.setOnClickListener(this)
+        letterIyne.setOnClickListener(this)
+        letterJuzim.setOnClickListener(this)
+        letterKitap.setOnClickListener(this)
+        letterQalem.setOnClickListener(this)
+        letterLagen.setOnClickListener(this)
+        letterMuz.setOnClickListener(this)
+        letterNan.setOnClickListener(this)
+        letterQoniraw.setOnClickListener(this)
+        letterOraq.setOnClickListener(this)
+        letterOrmekshi.setOnClickListener(this)
+        letterPiyaz.setOnClickListener(this)
+        letterRadio.setOnClickListener(this)
+        letterSabin.setOnClickListener(this)
+        letterTarezi.setOnClickListener(this)
+        letterUn.setOnClickListener(this)
+        letterUyrek.setOnClickListener(this)
+        letterVertolyot.setOnClickListener(this)
+        letterWaqit.setOnClickListener(this)
+        letterYolka.setOnClickListener(this)
+        letterZamark.setOnClickListener(this)
+        letterShar.setOnClickListener(this)
+        letterCircul.setOnClickListener(this)
+        letterChemodan.setOnClickListener(this)
+    }
 
-        letterAlma.setOnClickListener {
-             navController.navigate(R.id.action_lettersFragment_to_letterA2)
-        }
-        letterAtkonshek.setOnClickListener {
-            navController.navigate(R.id.action_lettersFragment_to_letterAt)
-
-        }
-
-        letterBaliq.setOnClickListener {
-            navController.navigate(R.id.action_lettersFragment_to_letterB)
-
-        }
-        letterDuwtar.setOnClickListener {
-            navController.navigate(R.id.action_lettersFragment_to_letterD)
-
-        }
-        letterFontan.setOnClickListener {
-            navController.navigate(R.id.action_lettersFragment_to_letterF)
-
-        }
-        letterEtik.setOnClickListener {
-            navController.navigate(R.id.action_lettersFragment_to_letterE)
-
-        }
-
-        letterGarbiz.setOnClickListener {
-            navController.navigate(R.id.action_lettersFragment_to_letterGa)
-
-        }
-        letterGul.setOnClickListener {
-            navController.navigate(R.id.action_lettersFragment_to_letterG)
-
-        }
-        letterHakke.setOnClickListener {
-            navController.navigate(R.id.action_lettersFragment_to_letterH)
-
-        }
-        letterXat.setOnClickListener {
-            navController.navigate(R.id.action_lettersFragment_to_letterX)
-
-        }
-        letterIlaq.setOnClickListener {
-            navController.navigate(R.id.action_lettersFragment_to_letterIl)
-
-        }
-        letterIyne.setOnClickListener {
-            navController.navigate(R.id.action_lettersFragment_to_letterIy)
-
-        }
-        letterJuzim.setOnClickListener {
-            navController.navigate(R.id.action_lettersFragment_to_letterJ)
-
-        }
-
-        letterKitap.setOnClickListener {
-            navController.navigate(R.id.action_lettersFragment_to_letterK)
-
-        }
-        letterQalem.setOnClickListener {
-            navController.navigate(R.id.action_lettersFragment_to_letterQ)
-
-        }
-        letterLagen.setOnClickListener {
-            navController.navigate(R.id.action_lettersFragment_to_letterL)
-
-        }
-        letterMuz.setOnClickListener {
-            navController.navigate(R.id.action_lettersFragment_to_letterM)
-
-        }
-        letterNan.setOnClickListener {
-            navController.navigate(R.id.action_lettersFragment_to_letterN)
-
-        }
-        letterQoniraw.setOnClickListener {
-            navController.navigate(R.id.action_lettersFragment_to_letterQoniraw2)
-
-        }
-        letterOraq.setOnClickListener {
-            navController.navigate(R.id.action_lettersFragment_to_letterO)
-
-        }
-        letterOrmekshi.setOnClickListener {
-            navController.navigate(R.id.action_lettersFragment_to_letterOrmek)
-
-        }
-        letterPiyaz.setOnClickListener {
-            navController.navigate(R.id.action_lettersFragment_to_letterP)
-
-        }
-        letterRadio.setOnClickListener {
-            navController.navigate(R.id.action_lettersFragment_to_letterR)
-
-        }
-        letterSabin.setOnClickListener {
-            navController.navigate(R.id.action_lettersFragment_to_letterS)
-
-        }
-        letterTarezi.setOnClickListener {
-            navController.navigate(R.id.action_lettersFragment_to_letterT)
-
-        }
-        letterUn.setOnClickListener {
-            navController.navigate(R.id.action_lettersFragment_to_letterU)
-
-        }
-        letterUyrek.setOnClickListener {
-            navController.navigate(R.id.action_lettersFragment_to_letterUy)
-
-        }
-        letterVertolyot.setOnClickListener {
-            navController.navigate(R.id.action_lettersFragment_to_letterV)
-
-        }
-        letterWaqit.setOnClickListener {
-            navController.navigate(R.id.action_lettersFragment_to_letterW)
-
-        }
-        letterYolka.setOnClickListener {
-            navController.navigate(R.id.action_lettersFragment_to_letterY)
-
-        }
-        letterZamark.setOnClickListener {
-            navController.navigate(R.id.action_lettersFragment_to_letterZ)
-
-        }
-        letterShar.setOnClickListener {
-            navController.navigate(R.id.action_lettersFragment_to_letterSh)
-
-        }
-        letterCircul.setOnClickListener {
-            navController.navigate(R.id.action_lettersFragment_to_letterC)
-
-        }
-        letterChemodan.setOnClickListener {
-            navController.navigate(R.id.action_lettersFragment_to_letterCh)
-
-        }
-
+    override fun onClick(v: View?) {
+        val action = LettersFragmentDirections.actionLettersFragmentToOneLetterFragment(v?.tag.toString().toInt())
+        navController.navigate(action)
     }
 }
