@@ -29,7 +29,7 @@ class OneLetterFragment : Fragment(R.layout.fragment_one_letter) {
             }
         }
         btnPrev.setOnClickListener {
-            if (currentId > 0) {
+            if (currentId > 1) {
                 currentId -= 1
                 setImg(currentId)
             } else {
