@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/lego_back"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="match_parent"
+        android:id="@+id/gl1"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="match_parent"
+        android:id="@+id/gl2"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+
+    <ImageButton
+        app:layout_constraintTop_toTopOf="@id/gl1"
+        android:layout_width="wrap_content"
+        android:id="@+id/btnGame1"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/gl2"
+        android:background="@drawable/btn_abcd"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        />
+
+    <ImageButton
+        app:layout_constraintTop_toTopOf="@id/gl1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:id="@+id/btnGame2"
+        android:layout_marginTop="35dp"
+        app:layout_constraintStart_toStartOf="@id/gl2"
+        android:background="@drawable/btn_raz"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

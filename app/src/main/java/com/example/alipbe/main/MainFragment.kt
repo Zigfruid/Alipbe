@@ -18,5 +18,8 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         btnStart.setOnClickListener {
             navController.navigate(R.id.action_mainFragment_to_lettersFragment)
         }
+        btnChooseGame.setOnClickListener {
+            navController.navigate(R.id.action_mainFragment_to_gameMenuFragment)
+        }
     }
 }

@@ -8,15 +8,28 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/background_football" />
+        android:src="@drawable/background_for_children" />
 
     <ImageButton
         android:id="@+id/btnStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="45dp"
+        android:layout_marginBottom="25dp"
         android:background="@drawable/button"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/carter_one"
+        android:text="ÁLIPBE"
+        android:textColor="@android:color/white"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="@id/gd2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -29,21 +42,15 @@
 
     <ImageButton
         android:layout_width="50dp"
+        android:id="@+id/btnChooseGame"
         android:layout_height="50dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="25dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="25dp"
         android:background="@drawable/joystick"
         app:layout_constraintBottom_toBottomOf="@id/btnStart"
-        app:layout_constraintEnd_toStartOf="@id/btnStart"
+        app:layout_constraintStart_toEndOf="@id/btnStart"
         app:layout_constraintTop_toTopOf="@id/btnStart" />
 
-    <ImageView
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/title_alipbe"
-        app:layout_constraintBottom_toBottomOf="@id/gd1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gd1"
