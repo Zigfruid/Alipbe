@@ -20,7 +20,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -41,16 +40,15 @@
         app:layout_constraintGuide_percent="0.7" />
 
     <ImageButton
-        android:layout_width="50dp"
         android:id="@+id/btnChooseGame"
+        android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="35dp"
         android:layout_marginStart="25dp"
+        android:layout_marginTop="35dp"
         android:background="@drawable/joystick"
         app:layout_constraintBottom_toBottomOf="@id/btnStart"
         app:layout_constraintStart_toEndOf="@id/btnStart"
         app:layout_constraintTop_toTopOf="@id/btnStart" />
-
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gd1"
