@@ -3,6 +3,7 @@ package com.example.alipbe.games
 import android.os.Bundle
 import android.view.Gravity
 import android.view.View
+import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
@@ -15,7 +16,7 @@ class GameFragment2 : Fragment(R.layout.fragment_game2) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         //Ǵǵ Úú Ńń Íı Óó Áá
-        val random = Random.nextInt(0,34)
+        val random = Random.nextInt(0, 34)
         val items: List<String> = listOf(
             "Alma",
             "Átkónshek",
@@ -59,23 +60,22 @@ class GameFragment2 : Fragment(R.layout.fragment_game2) {
         val st = tvRandomWord.text.toString()
         val chars = st.toCharArray()
         val layout = LinearLayout(requireContext())
-        layout.orientation = LinearLayout.VERTICAL
-        layout.gravity = Gravity.CENTER_VERTICAL
-        val innerLayout = LinearLayout(requireContext())
-        innerLayout.orientation = LinearLayout.VERTICAL
-        for (i in 1 until chars.size-1){
+        layout.orientation = LinearLayout.HORIZONTAL
+        val layoutLP= LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT)
+        layout.layoutParams=layoutLP
+        layoutLP.gravity=Gravity.CENTER
+          for (i in chars.indices){
             chars[i]
-            val tv = TextView(requireContext())
-            tv.text = chars[i].toString()
-            tv.textSize = 55f
-            innerLayout.addView(tv)
+            val button = Button(requireContext())
+            val buttonLP= LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT)
+            buttonLP.setMargins(20,20,20,20)
+            buttonLP.gravity=Gravity.BOTTOM
+            button.layoutParams=buttonLP
+            button.text = chars[i].toString()
+            button.textSize = 25f
+            button.setBackgroundResource(R.color.colorPrimary)
+            layout.addView(button)
         }
-        layout.addView(innerLayout)
         layout_gameFragment2.addView(layout)
-
-        tvFirstLetter.text = chars[0].toString()
-        tvLastLetter.text = chars.last().toString()
-
-
     }
 }
