@@ -17,7 +17,6 @@ class GameMenuFragment : Fragment(R.layout.game_menu_fragment) {
         navController = Navigation.findNavController(view)
 
         btnGame1.setOnClickListener {
-            navController.navigate(R.id.action_gameMenuFragment_to_dragAndDrop)
         }
         btnGame2.setOnClickListener {
             navController.navigate(R.id.action_gameMenuFragment_to_gameFragment2)

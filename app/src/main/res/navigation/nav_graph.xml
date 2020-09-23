@@ -49,16 +49,9 @@
         <action
             android:id="@+id/action_gameMenuFragment_to_gameFragment2"
             app:destination="@id/gameFragment2" />
-        <action
-            android:id="@+id/action_gameMenuFragment_to_dragAndDrop"
-            app:destination="@id/dragAndDrop" />
     </fragment>
     <fragment
         android:id="@+id/gameFragment2"
         android:name="com.example.alipbe.games.GameFragment2"
         android:label="GameFragment2" />
-    <fragment
-        android:id="@+id/dragAndDrop"
-        android:name="com.example.alipbe.games.DragAndDrop"
-        android:label="DragAndDrop" />
 </navigation>
