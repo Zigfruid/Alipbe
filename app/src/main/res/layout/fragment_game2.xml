@@ -7,16 +7,16 @@
     android:background="@android:color/holo_red_dark"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tvRandomWord"
-        android:textSize="50sp"
-        android:textColor="@android:color/white"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<!--    <TextView-->
+<!--        android:id="@+id/tvRandomWord"-->
+<!--        android:textSize="50sp"-->
+<!--        android:textColor="@android:color/white"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
 <!--    <LinearLayout-->
 <!--        android:orientation="horizontal"-->
