@@ -7,40 +7,26 @@
     android:background="@android:color/holo_red_dark"
     android:layout_height="match_parent">
 
-
     <TextView
         android:id="@+id/tvRandomWord"
         android:textSize="50sp"
         android:textColor="@android:color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvFirstLetter"
-        android:layout_width="wrap_content"
-        android:textSize="34sp"
-        android:textColor="@android:color/white"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvRandomWord" />
-
-    <TextView
-        android:id="@+id/tvLastLetter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="34sp"
-        android:textColor="@android:color/white"
-        android:layout_marginTop="25dp"
-        android:layout_marginStart="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/tvFirstLetter"
-        app:layout_constraintTop_toBottomOf="@id/tvRandomWord" />
+<!--    <LinearLayout-->
+<!--        android:orientation="horizontal"-->
+<!--        android:id="@+id/ll1_testFragment2"-->
+<!--        android:layout_width="650dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:background="@android:color/white"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:layout_marginBottom="55dp"/>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
