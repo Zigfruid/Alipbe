@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/llTop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@android:color/holo_green_light"
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <View
+            android:id="@+id/dragView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@android:color/white"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llBottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@android:color/holo_blue_bright"
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/llBottomInner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@android:color/darker_gray"
+            android:gravity="center"
+            android:layout_weight="1">
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll2Inner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@android:color/holo_red_dark"
+            android:gravity="center"
+            android:layout_weight="1">
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll3Inner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@android:color/holo_blue_dark"
+            android:gravity="center"
+            android:layout_weight="1">
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll4Inner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@android:color/holo_red_light"
+            android:gravity="center"
+            android:layout_weight="1">
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
