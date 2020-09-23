@@ -117,10 +117,10 @@ class GameFragment2 : Fragment(R.layout.fragment_game2) {
                     Log.i("myTag", "Action Down $oldXvalue,$oldYvalue")
                 } else if (me.action === MotionEvent.ACTION_MOVE) {
                     val params = LinearLayout.LayoutParams(v.width, v.height)
-                   params.setMargins((me.rawX - (v.width / 5)).toInt(),
-                       (me.rawY - (v.height)).toInt(),
-                       (me.rawY - (v.width / 5)).toInt(),
-                       (me.rawX - (v.height)).toInt())
+                    params.setMargins((me.rawX - (v.width / 5)).toInt(),
+                        (me.rawY - (v.height)).toInt(),
+                        (me.rawY - (v.width / 5)).toInt(),
+                        (me.rawX - (v.height)).toInt())
                     v.layoutParams = params
 
                 }
@@ -139,40 +139,40 @@ class GameFragment2 : Fragment(R.layout.fragment_game2) {
 
     private fun dragListener(): View.OnDragListener? {
         return View.OnDragListener { view, event ->
-             when (event.action) {
-                 DragEvent.ACTION_DRAG_STARTED -> {
-                     event.clipDescription.hasMimeType(ClipDescription.MIMETYPE_TEXT_PLAIN)
-                 }
-                 DragEvent.ACTION_DRAG_ENTERED -> {
-                     view.invalidate()
-                     true
-                 }
-                 DragEvent.ACTION_DRAG_LOCATION -> true
-                 DragEvent.ACTION_DRAG_EXITED -> {
-                     view.invalidate()
-                     true
-                 }
-                 DragEvent.ACTION_DROP -> {
-                     val item = event.clipData.getItemAt(0)
-                     val dragData = item.text
-                     Toast.makeText(requireContext(), dragData, Toast.LENGTH_SHORT).show()
-                     view.invalidate()
+            when (event.action) {
+                DragEvent.ACTION_DRAG_STARTED -> {
+                    event.clipDescription.hasMimeType(ClipDescription.MIMETYPE_TEXT_PLAIN)
+                }
+                DragEvent.ACTION_DRAG_ENTERED -> {
+                    view.invalidate()
+                    true
+                }
+                DragEvent.ACTION_DRAG_LOCATION -> true
+                DragEvent.ACTION_DRAG_EXITED -> {
+                    view.invalidate()
+                    true
+                }
+                DragEvent.ACTION_DROP -> {
+                    val item = event.clipData.getItemAt(0)
+                    val dragData = item.text
+                    Toast.makeText(requireContext(), dragData, Toast.LENGTH_SHORT).show()
+                    view.invalidate()
 
-                     val v = event.localState as View
-                     val owner = v.parent as ViewGroup
-                     owner.removeView(v)
-                     val destination = view as LinearLayout
-                     destination.addView(v)
-                     v.visibility = View.VISIBLE
-                     true
-                 }
-                 DragEvent.ACTION_DRAG_ENDED -> {
-                     view.invalidate()
-                     true
-                 }
-                 else -> false
-             }
-         }
+                    val v = event.localState as View
+                    val owner = v.parent as ViewGroup
+                    owner.removeView(v)
+                    val destination = view as LinearLayout
+                    destination.addView(v)
+                    v.visibility = View.VISIBLE
+                    true
+                }
+                DragEvent.ACTION_DRAG_ENDED -> {
+                    view.invalidate()
+                    true
+                }
+                else -> false
+            }
+        }
     }
     private fun toInt(param: Int): Int{
         return (param * Resources.getSystem().displayMetrics.density + 0.5f).toInt()
