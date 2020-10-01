@@ -4,21 +4,23 @@ import android.annotation.SuppressLint
 import android.content.ClipData
 import android.content.ClipDescription
 import android.content.res.Resources
+import android.graphics.Color
+import android.os.Build
 import android.os.Bundle
+import android.util.DisplayMetrics
 import android.util.Log
 import android.view.*
-import android.widget.Button
-import android.widget.LinearLayout
-import android.widget.Toast
-import androidx.constraintlayout.widget.ConstraintLayout
+import android.widget.*
+import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import com.example.alipbe.R
+import com.google.android.material.appbar.AppBarLayout
 import kotlinx.android.synthetic.main.fragment_game2.*
 import kotlin.random.Random
 
 
 @Suppress("DEPRECATED_IDENTITY_EQUALS")
-class GameFragment2 : Fragment(R.layout.fragment_game2) {
+class GameFragment2 : Fragment(R.layout.fragment_game2), View.OnDragListener {
 
     val random = Random.nextInt(0, 34)
     val items: List<String> = listOf(
@@ -58,123 +60,121 @@ class GameFragment2 : Fragment(R.layout.fragment_game2) {
         "Chemodan"
     )
 
+    @RequiresApi(Build.VERSION_CODES.N)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         //Ǵǵ Úú Ńń Íı Óó Áá
         divider()
 
     }
+
+    @RequiresApi(Build.VERSION_CODES.N)
     @SuppressLint("ClickableViewAccessibility")
     private fun divider() {
         val st = items[random]
         val chars = st.toCharArray()
-        val layout = LinearLayout(requireContext())
-        layout.orientation = LinearLayout.HORIZONTAL
-        val lp = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT)
-        layout.gravity = Gravity.CENTER
-        layout.layoutParams = lp
-
-        val bottomLayout = LinearLayout(requireContext())
-        bottomLayout.orientation = LinearLayout.HORIZONTAL
-        bottomLayout.gravity = Gravity.CENTER
-        //val lpBottom = LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT)
-        val lpZero = LinearLayout.LayoutParams(toInt(100), toInt(100))
-        bottomLayout.setBackgroundResource(R.color.colorPrimary)
-
-        for (i in chars.indices){
-            chars[i]
-            val dinamicButton = Button(requireContext())
-            dinamicButton.text = chars[i].toString()
-            dinamicButton.textSize = 55f
-            dragListener()
-
-
-
-
-            val dinamicButtonForm = LinearLayout(requireContext())
-            dinamicButtonForm.layoutParams = lpZero
-            dinamicButtonForm.weightSum = chars.size.toFloat()
-            dinamicButtonForm.gravity = Gravity.CENTER
-            dinamicButtonForm.setBackgroundResource(R.color.colorWhite)
-            dinamicButtonForm.setOnDragListener(dragListener())
-
-
-            dinamicButton.setOnLongClickListener {
-                val clipText = "Дурыс"
-                val item = ClipData.Item(clipText)
-                val mimeTypes = arrayOf(ClipDescription.MIMETYPE_TEXT_PLAIN)
-                val data = ClipData(clipText, mimeTypes, item)
+//        val layout = FrameLayout(requireContext())
+//        val lp = LinearLayout.LayoutParams(
+//            LinearLayout.LayoutParams.MATCH_PARENT,
+//            LinearLayout.LayoutParams.MATCH_PARENT
+//        )
+//        layout.layoutParams = lp
+        for (i in chars.indices) {
+            val dynamicButton = Button(requireContext())
+            dynamicButton.text = chars[i].toString()
+            dynamicButton.textSize = 50f
+            dynamicButton.setTextColor(Color.WHITE)
+            dynamicButton.setBackgroundColor(Color.BLUE)
+            dynamicButton.layoutParams = FrameLayout.LayoutParams(
+                FrameLayout.LayoutParams.WRAP_CONTENT,
+                FrameLayout.LayoutParams.WRAP_CONTENT
+            )
+            val displayMetrics = DisplayMetrics()
+            requireActivity().windowManager.defaultDisplay.getMetrics(displayMetrics)
+            val x = (0..displayMetrics.widthPixels - 100).random()
+            val y = (0..displayMetrics.heightPixels / 2 - 100).random()
+            dynamicButton.x = x.toFloat()
+            dynamicButton.y = y.toFloat()
+            dynamicButton.setOnLongClickListener {
                 val dragShadowBuilder = View.DragShadowBuilder(it)
-                it.startDragAndDrop(data, dragShadowBuilder, it, 0)
+                it.startDragAndDrop(null, dragShadowBuilder, it, 0)
                 it.visibility = View.VISIBLE
                 true
             }
-
-            dinamicButton.setOnTouchListener { v, me ->
-                if (me.action === MotionEvent.ACTION_DOWN) {
-                    val oldXvalue = me.x
-                    val oldYvalue = me.y
-                    Log.i("myTag", "Action Down $oldXvalue,$oldYvalue")
-                } else if (me.action === MotionEvent.ACTION_MOVE) {
-                    val params = LinearLayout.LayoutParams(v.width, v.height)
-                    params.setMargins((me.rawX - (v.width / 5)).toInt(),
-                        (me.rawY - (v.height)).toInt(),
-                        (me.rawY - (v.width / 5)).toInt(),
-                        (me.rawX - (v.height)).toInt())
-                    v.layoutParams = params
-
-                }
-                true
-            }
-
-            layout.addView(dinamicButton)
-            bottomLayout.addView(dinamicButtonForm)
-
+            flAnswer.addView(dynamicButton)
+            val dynamicBtn = Button(requireContext())
+            dynamicBtn.text = chars[i].toString()
+            dynamicBtn.setBackgroundColor(Color.TRANSPARENT)
+            dynamicBtn.setTextColor(Color.WHITE)
+            dynamicBtn.textSize = 50f
+            dynamicBtn.layoutParams = FrameLayout.LayoutParams(
+                FrameLayout.LayoutParams.WRAP_CONTENT,
+                FrameLayout.LayoutParams.WRAP_CONTENT
+            )
+            dynamicBtn.setOnDragListener(this)
+            dynamicBtn.tag = "button"
+            llQuestion.addView(dynamicBtn)
+//            dynamicButton.setOnTouchListener { view, motionEvent ->
+//                if (motionEvent.action == MotionEvent.ACTION_MOVE) {
+//                    view.y = motionEvent.rawY - view.height/2
+//                    view.x = motionEvent.rawX - view.width/2
+//                }
+//                true
+//            }
         }
-        layout.setOnDragListener(dragListener())
-        layout_gameFragment2.addView(bottomLayout)
-        layout_gameFragment2.addView(layout)
-
+        flAnswer.setOnDragListener(this)
+        //llQuestion.setOnDragListener(this)
     }
 
-    private fun dragListener(): View.OnDragListener? {
-        return View.OnDragListener { view, event ->
-            when (event.action) {
-                DragEvent.ACTION_DRAG_STARTED -> {
-                    event.clipDescription.hasMimeType(ClipDescription.MIMETYPE_TEXT_PLAIN)
-                }
-                DragEvent.ACTION_DRAG_ENTERED -> {
-                    view.invalidate()
-                    true
-                }
-                DragEvent.ACTION_DRAG_LOCATION -> true
-                DragEvent.ACTION_DRAG_EXITED -> {
-                    view.invalidate()
-                    true
-                }
-                DragEvent.ACTION_DROP -> {
-                    val item = event.clipData.getItemAt(0)
-                    val dragData = item.text
-                    Toast.makeText(requireContext(), dragData, Toast.LENGTH_SHORT).show()
-                    view.invalidate()
-
-                    val v = event.localState as View
-                    val owner = v.parent as ViewGroup
-                    owner.removeView(v)
-                    val destination = view as LinearLayout
-                    destination.addView(v)
-                    v.visibility = View.VISIBLE
-                    true
-                }
-                DragEvent.ACTION_DRAG_ENDED -> {
-                    view.invalidate()
-                    true
-                }
-                else -> false
-            }
-        }
-    }
-    private fun toInt(param: Int): Int{
+    private fun toInt(param: Int): Int {
         return (param * Resources.getSystem().displayMetrics.density + 0.5f).toInt()
+    }
+
+    override fun onDrag(v: View?, event: DragEvent?): Boolean {
+        when (event?.action) {
+            DragEvent.ACTION_DRAG_STARTED -> {
+                return true
+            }
+            DragEvent.ACTION_DRAG_ENTERED -> {
+                return true
+            }
+            DragEvent.ACTION_DRAG_LOCATION -> {
+                Log.d("location x", event.x.toString())
+                Log.d("location y", event.y.toString())
+                return true
+            }
+            DragEvent.ACTION_DRAG_EXITED -> {
+                return true
+            }
+            DragEvent.ACTION_DROP -> {
+                //if (v == )
+                val rightLetter: Button? = v as? Button
+                val view: Button = event.localState as Button
+                if (rightLetter?.text == view.text) {
+                    rightLetter?.setBackgroundColor(Color.BLUE)
+                    view.visibility = View.GONE
+                } else {
+                    val owner: ViewGroup
+                    val button: Button = event.localState as Button
+                    var destination: FrameLayout? = null
+                    if (v?.tag == "layout") {
+                        owner = button.parent as ViewGroup
+                        owner.removeView(view)
+                        destination = v as? FrameLayout
+                        destination?.addView(view)
+                        button.visibility = View.VISIBLE
+                        button.x = event.x - view.width / 2
+                        button.y = event.y - view.height / 2
+                    }
+                }
+                return true
+            }
+            DragEvent.ACTION_DRAG_ENDED -> {
+                return true
+            }
+            else -> {
+                return false
+            }
+        }
     }
 }
