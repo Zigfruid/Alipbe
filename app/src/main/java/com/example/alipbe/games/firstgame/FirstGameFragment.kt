@@ -46,7 +46,7 @@ class FirstGameFragment : Fragment(R.layout.fragment_first_game), View.OnClickLi
     }
 
     private fun generateQuestion() {
-        val pos: Int = (1..arr.size).random()
+        val pos: Int = (0 until arr.size).random()
         isEnabled(true)
         res = pos
         usedLetters[res] = true
@@ -59,7 +59,7 @@ class FirstGameFragment : Fragment(R.layout.fragment_first_game), View.OnClickLi
         generateWrongAnswer(btnAnswer2)
         generateWrongAnswer(btnAnswer3)
         generateWrongAnswer(btnAnswer4)
-        when ((1..4).random()) {
+        when ((0..4).random()) {
             0 -> {
                 btnAnswer1.text = arr[res]
                 btnAnswer1.setBackgroundResource(R.drawable.background_green)
