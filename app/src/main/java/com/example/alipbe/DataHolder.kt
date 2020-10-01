@@ -1,0 +1,40 @@
+package com.example.alipbe
+
+object DataHolder {
+    val arr: ArrayList<String> = arrayListOf(
+        "A",
+        "Á",
+        "B",
+        "D",
+        "E",
+        "F",
+        "G",
+        "Ǵ",
+        "H",
+        "X",
+        "Í",
+        "I",
+        "J",
+        "K",
+        "Q",
+        "L",
+        "M",
+        "N",
+        "Ń",
+        "O",
+        "Ó",
+        "P",
+        "R",
+        "S",
+        "T",
+        "U",
+        "Ú",
+        "V",
+        "W",
+        "Y",
+        "Z",
+        "Sh",
+        "C",
+        "Ch"
+    )
+}

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/mainFragment">
     <fragment
@@ -45,5 +46,18 @@
     <fragment
         android:id="@+id/gameMenuFragment"
         android:name="com.example.alipbe.main.GameMenuFragment"
-        android:label="GameMenuFragment" />
+        android:label="GameMenuFragment">
+        <action
+            android:id="@+id/action_gameMenuFragment_to_firstGameFragment"
+            app:destination="@id/firstGameFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstGameFragment"
+        android:name="com.example.alipbe.games.firstgame.FirstGameFragment"
+        android:label="fragment_first_game"
+        tools:layout="@layout/fragment_first_game" />
 </navigation>

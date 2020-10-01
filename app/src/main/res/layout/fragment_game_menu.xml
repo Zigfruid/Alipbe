@@ -40,5 +40,4 @@
         app:layout_constraintStart_toStartOf="@id/gl2"
         app:layout_constraintTop_toTopOf="@id/gl1" />
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>
