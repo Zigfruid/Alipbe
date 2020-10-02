@@ -1,4 +1,4 @@
-package com.example.alipbe.main
+package com.example.alipbe.games
 
 import android.os.Bundle
 import android.view.View
@@ -17,6 +17,9 @@ class GameMenuFragment : Fragment(R.layout.fragment_game_menu) {
         navController = Navigation.findNavController(view)
         btnGame1.setOnClickListener {
             navController.navigate(R.id.action_gameMenuFragment_to_firstGameFragment)
+        }
+        btnGame2.setOnClickListener {
+            navController.navigate(R.id.action_gameMenuFragment_to_gameFragment2)
         }
     }
 }
