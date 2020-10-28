@@ -29,7 +29,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
-            android:src="@drawable/alma"
+            android:src="@drawable/letter1"
             android:tag="1" />
 
         <ImageView
@@ -38,7 +38,7 @@
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
-            android:src="@drawable/atkonshek"
+            android:src="@drawable/letter2"
             android:tag="2" />
 
         <ImageView
@@ -47,7 +47,7 @@
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
-            android:src="@drawable/baliq"
+            android:src="@drawable/letter3"
             android:tag="3" />
 
         <ImageView
@@ -56,7 +56,7 @@
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
-            android:src="@drawable/duwtar"
+            android:src="@drawable/letter4"
             android:tag="4" />
 
         <ImageView
@@ -65,7 +65,7 @@
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
-            android:src="@drawable/etik"
+            android:src="@drawable/letter5"
             android:tag="5" />
 
         <ImageView
@@ -74,7 +74,7 @@
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
-            android:src="@drawable/fontan"
+            android:src="@drawable/letter6"
             android:tag="6" />
 
         <ImageView
@@ -83,7 +83,7 @@
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
-            android:src="@drawable/gul"
+            android:src="@drawable/letter7"
             android:tag="7" />
 
         <ImageView
@@ -92,7 +92,7 @@
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
-            android:src="@drawable/garbiz"
+            android:src="@drawable/letter8"
             android:tag="8" />
     </LinearLayout>
 
@@ -113,7 +113,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
-            android:src="@drawable/hakke"
+            android:src="@drawable/letter9"
             android:tag="9" />
 
         <ImageView
@@ -122,7 +122,7 @@
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
-            android:src="@drawable/xat"
+            android:src="@drawable/letter10"
             android:tag="10" />
 
         <ImageView
@@ -131,7 +131,7 @@
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
-            android:src="@drawable/ilaq"
+            android:src="@drawable/letter11"
             android:tag="11" />
 
         <ImageView
@@ -140,7 +140,7 @@
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
-            android:src="@drawable/iyne"
+            android:src="@drawable/letter12"
             android:tag="12" />
 
         <ImageView
@@ -149,7 +149,7 @@
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
-            android:src="@drawable/juzim"
+            android:src="@drawable/letter13"
             android:tag="13" />
 
         <ImageView
@@ -158,7 +158,7 @@
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
-            android:src="@drawable/kitap"
+            android:src="@drawable/letter14"
             android:tag="14" />
 
         <ImageView
@@ -167,7 +167,7 @@
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
-            android:src="@drawable/qalem"
+            android:src="@drawable/letter15"
             android:tag="15" />
 
         <ImageView
@@ -176,7 +176,7 @@
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
-            android:src="@drawable/lagen"
+            android:src="@drawable/letter16"
             android:tag="16" />
     </LinearLayout>
 
@@ -197,7 +197,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
-            android:src="@drawable/muz"
+            android:src="@drawable/letter17"
             android:tag="17" />
 
         <ImageView
@@ -206,7 +206,7 @@
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
-            android:src="@drawable/nan"
+            android:src="@drawable/letter18"
             android:tag="18" />
 
         <ImageView
@@ -215,7 +215,7 @@
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
-            android:src="@drawable/qoniraw"
+            android:src="@drawable/letter19"
             android:tag="19" />
 
         <ImageView
@@ -224,7 +224,7 @@
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
-            android:src="@drawable/oraq"
+            android:src="@drawable/letter20"
             android:tag="20" />
 
         <ImageView
@@ -233,7 +233,7 @@
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
-            android:src="@drawable/ormekshi"
+            android:src="@drawable/letter21"
             android:tag="21" />
 
         <ImageView
@@ -242,7 +242,7 @@
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
-            android:src="@drawable/piyaz"
+            android:src="@drawable/letter22"
             android:tag="22" />
 
         <ImageView
@@ -251,7 +251,7 @@
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
-            android:src="@drawable/radio"
+            android:src="@drawable/letter23"
             android:tag="23" />
 
         <ImageView
@@ -260,7 +260,7 @@
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
-            android:src="@drawable/sabin"
+            android:src="@drawable/letter24"
             android:tag="24" />
     </LinearLayout>
 
@@ -281,7 +281,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
-            android:src="@drawable/tarezi"
+            android:src="@drawable/letter25"
             android:tag="25" />
 
         <ImageView
@@ -290,7 +290,7 @@
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
-            android:src="@drawable/un"
+            android:src="@drawable/letter26"
             android:tag="26" />
 
         <ImageView
@@ -299,7 +299,7 @@
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
-            android:src="@drawable/uyrek"
+            android:src="@drawable/letter27"
             android:tag="27" />
 
         <ImageView
@@ -308,7 +308,7 @@
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
-            android:src="@drawable/vertolyot"
+            android:src="@drawable/letter28"
             android:tag="28" />
 
         <ImageView
@@ -317,7 +317,7 @@
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
-            android:src="@drawable/waqit"
+            android:src="@drawable/letter29"
             android:tag="29" />
 
         <ImageView
@@ -326,7 +326,7 @@
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
-            android:src="@drawable/yolka"
+            android:src="@drawable/letter30"
             android:tag="30" />
 
         <ImageView
@@ -335,7 +335,7 @@
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
-            android:src="@drawable/zamark"
+            android:src="@drawable/letter31"
             android:tag="31" />
 
         <ImageView
@@ -344,7 +344,7 @@
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
-            android:src="@drawable/shar"
+            android:src="@drawable/letter32"
             android:tag="32" />
     </LinearLayout>
 
@@ -364,7 +364,7 @@
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
-            android:src="@drawable/circul"
+            android:src="@drawable/letter33"
             android:tag="33" />
 
         <ImageView
@@ -373,7 +373,7 @@
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
-            android:src="@drawable/chemodan"
+            android:src="@drawable/letter34"
             android:tag="34" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
