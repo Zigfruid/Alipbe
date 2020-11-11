@@ -12,6 +12,10 @@ import kotlinx.android.synthetic.main.fragment_one_letter.*
 
 class OneLetterFragment : Fragment(R.layout.fragment_one_letter) {
 
+    companion object {
+        const val MAX_LETTERS = 34
+    }
+
     private lateinit var soundPool: SoundPool
     private val safeArgs: OneLetterFragmentArgs by navArgs()
     private var currentId: Int = 1
@@ -34,12 +38,12 @@ class OneLetterFragment : Fragment(R.layout.fragment_one_letter) {
             resources.getIdentifier("letter$currentId", "raw", requireActivity().packageName),
             1
         )
-        soundPool.setOnLoadCompleteListener { soundPool, sampleId, status ->
-            soundPool.play(sampleId, 1F, 1F, 0, 1, 1F)
+        soundPool.setOnLoadCompleteListener { soundPool, sampleId, _ ->
+            soundPool.play(sampleId, 1f, 1f, 0, 1, 1f)
         }
         btnNext.setOnClickListener {
             currentId += 1
-            if (currentId < 35) {
+            if (currentId <= MAX_LETTERS) {
                 setImg(currentId)
             } else {
                 currentId = 1
@@ -56,7 +60,7 @@ class OneLetterFragment : Fragment(R.layout.fragment_one_letter) {
                 currentId -= 1
                 setImg(currentId)
             } else {
-                currentId = 34
+                currentId = MAX_LETTERS
                 setImg(currentId)
             }
             sound = soundPool.load(

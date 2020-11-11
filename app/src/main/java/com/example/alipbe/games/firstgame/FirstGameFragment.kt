@@ -20,6 +20,9 @@ import kotlinx.coroutines.launch
 
 class FirstGameFragment : Fragment(R.layout.fragment_first_game), View.OnClickListener {
 
+    companion object {
+        const val TIME = 3000
+    }
     private val arr: ArrayList<String> = DataHolder.arr
     private var res = 0
     private val usedLetters = BooleanArray(arr.size)
@@ -59,20 +62,20 @@ class FirstGameFragment : Fragment(R.layout.fragment_first_game), View.OnClickLi
         generateWrongAnswer(btnAnswer2)
         generateWrongAnswer(btnAnswer3)
         generateWrongAnswer(btnAnswer4)
-        when ((0..4).random()) {
-            0 -> {
+        when ((1..4).random()) {
+            1 -> {
                 btnAnswer1.text = arr[res]
                 btnAnswer1.setBackgroundResource(R.drawable.background_green)
             }
-            1 -> {
+            2 -> {
                 btnAnswer2.text = arr[res]
                 btnAnswer2.setBackgroundResource(R.drawable.background_green)
             }
-            2 -> {
+            3 -> {
                 btnAnswer3.setBackgroundResource(R.drawable.background_green)
                 btnAnswer3.text = arr[res]
             }
-            3 -> {
+            4 -> {
                 btnAnswer4.setBackgroundResource(R.drawable.background_green)
                 btnAnswer4.text = arr[res]
             }
@@ -93,7 +96,7 @@ class FirstGameFragment : Fragment(R.layout.fragment_first_game), View.OnClickLi
             val myAnim: Animation = AnimationUtils.loadAnimation(requireContext(), R.anim.logo_anim)
             tvAnswer.startAnimation(myAnim)
             GlobalScope.launch {
-                delay(3000)
+                delay(TIME.toLong())
                 activity?.runOnUiThread {
                     generateQuestion()
                     tvAnswer.visibility = View.GONE
