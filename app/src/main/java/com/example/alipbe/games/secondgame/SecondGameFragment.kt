@@ -1,22 +1,19 @@
 package com.example.alipbe.games.secondgame
 
-import android.content.res.Resources
 import android.graphics.Color
 import android.os.Bundle
 import android.util.DisplayMetrics
 import android.view.DragEvent
-import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.FrameLayout
-import android.widget.TextView
-import androidx.core.view.marginEnd
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
-import androidx.transition.Slide
 import com.example.alipbe.DataHolder
 import com.example.alipbe.R
+import com.example.alipbe.dp
+import com.example.alipbe.dpToSp
 import kotlinx.android.synthetic.main.fragment_second_game.*
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
@@ -24,17 +21,19 @@ import kotlinx.coroutines.launch
 import nl.dionsegijn.konfetti.models.Shape
 import nl.dionsegijn.konfetti.models.Size
 
+
 class SecondGameFragment : Fragment(R.layout.fragment_second_game), View.OnDragListener {
 
     companion object {
         const val MAX_LETTERS = 33
-        const val TEXT_SIZE = 50f
+        var TEXT_SIZE = 12f
     }
 
     private var random = (0..MAX_LETTERS).random()
     private val items: List<String> = DataHolder.questionWords
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        TEXT_SIZE = 12.dp.dpToSp(requireContext()).toFloat()
         val navController = Navigation.findNavController(view)
         divider()
         homeBtn.setOnClickListener {
@@ -46,7 +45,7 @@ class SecondGameFragment : Fragment(R.layout.fragment_second_game), View.OnDragL
         val st = items[random]
         imgQuestion.setImageResource(
             resources.getIdentifier(
-                "letter_${random+1}",
+                "letter_${random + 1}",
                 "drawable",
                 requireContext().packageName
             )
@@ -60,10 +59,10 @@ class SecondGameFragment : Fragment(R.layout.fragment_second_game), View.OnDragL
         )
         val chars = st.toCharArray()
         val params = FrameLayout.LayoutParams(
-            200,
-            200
+            50.dp,
+            50.dp
         )
-        params.setMargins(8,8,8,8)
+        params.setMargins(8, 8, 8, 8)
         for (i in chars.indices) {
             val dynamicButton = Button(requireContext())
             dynamicButton.text = chars[i].toString()
@@ -71,16 +70,21 @@ class SecondGameFragment : Fragment(R.layout.fragment_second_game), View.OnDragL
             dynamicButton.setTextColor(Color.WHITE)
             dynamicButton.setBackgroundResource(R.drawable.ic_btn5)
             dynamicButton.layoutParams = FrameLayout.LayoutParams(
-                200,
-                200
+                50.dp,
+                50.dp
             )
-            dynamicButton.setPadding(8,0,8,0)
+            dynamicButton.setPadding(8, 0, 8, 0)
             val displayMetrics = DisplayMetrics()
             requireActivity().windowManager.defaultDisplay.getMetrics(displayMetrics)
-            val x = (0..displayMetrics.widthPixels - 150).random()
-            val y = (0..displayMetrics.heightPixels / 2 - 150).random()
-            dynamicButton.x = x.toFloat()
-            dynamicButton.y = y.toFloat()
+            val x = displayMetrics.widthPixels
+            val x1 = 800
+            if (x / x1 >= 2) {
+                dynamicButton.x = (0..1700).random().toFloat()
+                dynamicButton.y = (0..400).random().toFloat()
+            } else {
+                dynamicButton.x = (0..800).random().toFloat()
+                dynamicButton.y = (0..100).random().toFloat()
+            }
             dynamicButton.setOnLongClickListener {
                 val dragShadowBuilder = View.DragShadowBuilder(it)
                 it.startDragAndDrop(null, dragShadowBuilder, it, 0)
@@ -94,7 +98,7 @@ class SecondGameFragment : Fragment(R.layout.fragment_second_game), View.OnDragL
             dynamicBtn.setBackgroundResource(R.drawable.ic_btn6)
             dynamicBtn.setTextColor(Color.WHITE)
             dynamicBtn.textSize = TEXT_SIZE
-            dynamicBtn.setPadding(8,0,8,0)
+            dynamicBtn.setPadding(8, 0, 8, 0)
             dynamicBtn.layoutParams = params
             dynamicBtn.setOnDragListener(this)
             dynamicBtn.tag = "button"
@@ -102,8 +106,7 @@ class SecondGameFragment : Fragment(R.layout.fragment_second_game), View.OnDragL
         }
         flAnswer.setOnDragListener(this)
     }
-    private val Int.dp: Int
-        get() = (this * Resources.getSystem().displayMetrics.density + 0.5f).toInt()
+
 
     override fun onDrag(v: View?, event: DragEvent?): Boolean {
         when (event?.action) {
@@ -144,7 +147,7 @@ class SecondGameFragment : Fragment(R.layout.fragment_second_game), View.OnDragL
                             .addShapes(Shape.Square, Shape.Circle)
                             .addSizes(Size(12))
                             .setPosition(-50f, viewKonfetti.width + 50f, -50f, -50f)
-                            .streamFor(300,2000L)
+                            .streamFor(300, 2000L)
                         GlobalScope.launch {
                             delay(3000L)
                             activity?.runOnUiThread {

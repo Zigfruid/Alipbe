@@ -2,19 +2,15 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/child_second_background" />
+    android:layout_height="match_parent"
+    android:background="@drawable/child_second_background">
 
     <LinearLayout
         android:id="@+id/ll1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@id/ll2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,330 +18,333 @@
         app:layout_constraintVertical_bias="0.4"
         app:layout_constraintVertical_chainStyle="packed">
 
-        <ImageView
-            android:id="@+id/letterAlma"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:src="@drawable/letter1"
-            android:tag="1" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/letterAlma"-->
+        <!--            android:layout_width="55dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_marginStart="8dp"-->
+        <!--            android:layout_marginEnd="8dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:src="@drawable/letter1"-->
+        <!--            android:tag="1" />-->
 
-        <ImageView
-            android:id="@+id/letterAtkonshek"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:src="@drawable/letter2"
-            android:tag="2" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/letterAtkonshek"-->
+        <!--            android:layout_width="55dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_marginEnd="8dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:src="@drawable/letter2"-->
+        <!--            android:tag="2" />-->
 
-        <ImageView
-            android:id="@+id/letterBaliq"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:src="@drawable/letter3"
-            android:tag="3" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/letterBaliq"-->
+        <!--            android:layout_width="55dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_marginEnd="8dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:src="@drawable/letter3"-->
+        <!--            android:tag="3" />-->
 
-        <ImageView
-            android:id="@+id/letterDuwtar"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:src="@drawable/letter4"
-            android:tag="4" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/letterDuwtar"-->
+        <!--            android:layout_width="55dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_marginEnd="8dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:src="@drawable/letter4"-->
+        <!--            android:tag="4" />-->
 
-        <ImageView
-            android:id="@+id/letterEtik"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:src="@drawable/letter5"
-            android:tag="5" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/letterEtik"-->
+        <!--            android:layout_width="55dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_marginEnd="8dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:src="@drawable/letter5"-->
+        <!--            android:tag="5" />-->
 
-        <ImageView
-            android:id="@+id/letterFontan"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:src="@drawable/letter6"
-            android:tag="6" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/letterFontan"-->
+        <!--            android:layout_width="55dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_marginEnd="8dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:src="@drawable/letter6"-->
+        <!--            android:tag="6" />-->
 
-        <ImageView
-            android:id="@+id/letterGul"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:src="@drawable/letter7"
-            android:tag="7" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/letterGul"-->
+        <!--            android:layout_width="55dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_marginEnd="8dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:src="@drawable/letter7"-->
+        <!--            android:tag="7" />-->
 
-        <ImageView
-            android:id="@+id/letterGarbiz"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:src="@drawable/letter8"
-            android:tag="8" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/letterGarbiz"-->
+        <!--            android:layout_width="55dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_marginEnd="8dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:src="@drawable/letter8"-->
+        <!--            android:tag="8" />-->
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/ll2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@id/ll3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ll1"
         app:layout_constraintVertical_chainStyle="packed">
 
-        <ImageView
-            android:id="@+id/letterHakke"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:src="@drawable/letter9"
-            android:tag="9" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/letterHakke"-->
+        <!--            android:layout_width="55dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_marginStart="8dp"-->
+        <!--            android:layout_marginEnd="8dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:src="@drawable/letter9"-->
+        <!--            android:tag="9" />-->
 
-        <ImageView
-            android:id="@+id/letterXat"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:src="@drawable/letter10"
-            android:tag="10" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/letterXat"-->
+        <!--            android:layout_width="55dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_marginEnd="8dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:src="@drawable/letter10"-->
+        <!--            android:tag="10" />-->
 
-        <ImageView
-            android:id="@+id/letterIlaq"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:src="@drawable/letter11"
-            android:tag="11" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/letterIlaq"-->
+        <!--            android:layout_width="55dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_marginEnd="8dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:src="@drawable/letter11"-->
+        <!--            android:tag="11" />-->
 
-        <ImageView
-            android:id="@+id/letterIyne"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:src="@drawable/letter12"
-            android:tag="12" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/letterIyne"-->
+        <!--            android:layout_width="55dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_marginEnd="8dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:src="@drawable/letter12"-->
+        <!--            android:tag="12" />-->
 
-        <ImageView
-            android:id="@+id/letterJuzim"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:src="@drawable/letter13"
-            android:tag="13" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/letterJuzim"-->
+        <!--            android:layout_width="55dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_marginEnd="8dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:src="@drawable/letter13"-->
+        <!--            android:tag="13" />-->
 
-        <ImageView
-            android:id="@+id/letterKitap"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:src="@drawable/letter14"
-            android:tag="14" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/letterKitap"-->
+        <!--            android:layout_width="55dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_marginEnd="8dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:src="@drawable/letter14"-->
+        <!--            android:tag="14" />-->
 
-        <ImageView
-            android:id="@+id/letterQalem"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:src="@drawable/letter15"
-            android:tag="15" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/letterQalem"-->
+        <!--            android:layout_width="55dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_marginEnd="8dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:src="@drawable/letter15"-->
+        <!--            android:tag="15" />-->
 
-        <ImageView
-            android:id="@+id/letterLagen"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:src="@drawable/letter16"
-            android:tag="16" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/letterLagen"-->
+        <!--            android:layout_width="55dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_marginEnd="8dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:src="@drawable/letter16"-->
+        <!--            android:tag="16" />-->
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/ll3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@id/ll4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ll2"
         app:layout_constraintVertical_chainStyle="packed">
 
-        <ImageView
-            android:id="@+id/letterMuz"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:src="@drawable/letter17"
-            android:tag="17" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/letterMuz"-->
+        <!--            android:layout_width="55dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_marginStart="8dp"-->
+        <!--            android:layout_marginEnd="8dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:src="@drawable/letter17"-->
+        <!--            android:tag="17" />-->
 
-        <ImageView
-            android:id="@+id/letterNan"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:src="@drawable/letter18"
-            android:tag="18" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/letterNan"-->
+        <!--            android:layout_width="55dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_marginEnd="8dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:src="@drawable/letter18"-->
+        <!--            android:tag="18" />-->
 
-        <ImageView
-            android:id="@+id/letterQoniraw"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:src="@drawable/letter19"
-            android:tag="19" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/letterQoniraw"-->
+        <!--            android:layout_width="55dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_marginEnd="8dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:src="@drawable/letter19"-->
+        <!--            android:tag="19" />-->
 
-        <ImageView
-            android:id="@+id/letterOraq"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:src="@drawable/letter20"
-            android:tag="20" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/letterOraq"-->
+        <!--            android:layout_width="55dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_marginEnd="8dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:src="@drawable/letter20"-->
+        <!--            android:tag="20" />-->
 
-        <ImageView
-            android:id="@+id/letterOrmekshi"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:src="@drawable/letter21"
-            android:tag="21" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/letterOrmekshi"-->
+        <!--            android:layout_width="55dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_marginEnd="8dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:src="@drawable/letter21"-->
+        <!--            android:tag="21" />-->
 
-        <ImageView
-            android:id="@+id/letterPiyaz"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:src="@drawable/letter22"
-            android:tag="22" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/letterPiyaz"-->
+        <!--            android:layout_width="55dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_marginEnd="8dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:src="@drawable/letter22"-->
+        <!--            android:tag="22" />-->
 
-        <ImageView
-            android:id="@+id/letterRadio"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:src="@drawable/letter23"
-            android:tag="23" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/letterRadio"-->
+        <!--            android:layout_width="55dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_marginEnd="8dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:src="@drawable/letter23"-->
+        <!--            android:tag="23" />-->
 
-        <ImageView
-            android:id="@+id/letterSabin"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:src="@drawable/letter24"
-            android:tag="24" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/letterSabin"-->
+        <!--            android:layout_width="55dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_marginEnd="8dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:src="@drawable/letter24"-->
+        <!--            android:tag="24" />-->
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/ll4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@id/ll5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ll3"
         app:layout_constraintVertical_chainStyle="packed">
 
-        <ImageView
-            android:id="@+id/letterTarezi"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:src="@drawable/letter25"
-            android:tag="25" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/letterTarezi"-->
+        <!--            android:layout_width="55dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_marginStart="8dp"-->
+        <!--            android:layout_marginEnd="8dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:src="@drawable/letter25"-->
+        <!--            android:tag="25" />-->
 
-        <ImageView
-            android:id="@+id/letterUn"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:src="@drawable/letter26"
-            android:tag="26" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/letterUn"-->
+        <!--            android:layout_width="55dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_marginEnd="8dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:src="@drawable/letter26"-->
+        <!--            android:tag="26" />-->
 
-        <ImageView
-            android:id="@+id/letterUyrek"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:src="@drawable/letter27"
-            android:tag="27" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/letterUyrek"-->
+        <!--            android:layout_width="55dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_marginEnd="8dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:src="@drawable/letter27"-->
+        <!--            android:tag="27" />-->
 
-        <ImageView
-            android:id="@+id/letterVertolyot"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:src="@drawable/letter28"
-            android:tag="28" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/letterVertolyot"-->
+        <!--            android:layout_width="55dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_marginEnd="8dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:src="@drawable/letter28"-->
+        <!--            android:tag="28" />-->
 
-        <ImageView
-            android:id="@+id/letterWaqit"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:src="@drawable/letter29"
-            android:tag="29" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/letterWaqit"-->
+        <!--            android:layout_width="55dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_marginEnd="8dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:src="@drawable/letter29"-->
+        <!--            android:tag="29" />-->
 
-        <ImageView
-            android:id="@+id/letterYolka"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:src="@drawable/letter30"
-            android:tag="30" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/letterYolka"-->
+        <!--            android:layout_width="55dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_marginEnd="8dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:src="@drawable/letter30"-->
+        <!--            android:tag="30" />-->
 
-        <ImageView
-            android:id="@+id/letterZamark"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:src="@drawable/letter31"
-            android:tag="31" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/letterZamark"-->
+        <!--            android:layout_width="55dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_marginEnd="8dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:src="@drawable/letter31"-->
+        <!--            android:tag="31" />-->
 
-        <ImageView
-            android:id="@+id/letterShar"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:src="@drawable/letter32"
-            android:tag="32" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/letterShar"-->
+        <!--            android:layout_width="55dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_marginEnd="8dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:src="@drawable/letter32"-->
+        <!--            android:tag="32" />-->
     </LinearLayout>
 
     <LinearLayout
@@ -358,22 +357,22 @@
         app:layout_constraintTop_toBottomOf="@id/ll4"
         app:layout_constraintVertical_chainStyle="packed">
 
-        <ImageView
-            android:id="@+id/letterCircul"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:src="@drawable/letter33"
-            android:tag="33" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/letterCircul"-->
+        <!--            android:layout_width="55dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_marginEnd="8dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:src="@drawable/letter33"-->
+        <!--            android:tag="33" />-->
 
-        <ImageView
-            android:id="@+id/letterChemodan"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:src="@drawable/letter34"
-            android:tag="34" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/letterChemodan"-->
+        <!--            android:layout_width="55dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_marginEnd="8dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:src="@drawable/letter34"-->
+        <!--            android:tag="34" />-->
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
