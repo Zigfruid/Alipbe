@@ -22,19 +22,19 @@ class LettersFragment : Fragment(R.layout.fragment_letters), View.OnClickListene
         navController = Navigation.findNavController(view)
         val displayMetrics = DisplayMetrics()
         requireActivity().windowManager.defaultDisplay.getMetrics(displayMetrics)
-        if (displayMetrics.widthPixels <= 1000) {
-             params = FrameLayout.LayoutParams(
+        params = if (displayMetrics.widthPixels <= 1000) {
+            FrameLayout.LayoutParams(
                 55.dp,
                 60.dp
             )
         } else {
-            params = FrameLayout.LayoutParams(
+            FrameLayout.LayoutParams(
                 70.dp,
                 60.dp
             )
         }
         params.setMargins(0, 0, 8, 0)
-        for (i in 1..8){
+        for (i in 1..8) {
             val imgView = ImageView(requireContext())
             imgView.setOnClickListener(this)
             imgView.layoutParams = params
@@ -42,7 +42,7 @@ class LettersFragment : Fragment(R.layout.fragment_letters), View.OnClickListene
             imgView.tag = i
             ll1.addView(imgView)
         }
-        for (i in 9..16){
+        for (i in 9..16) {
             val imgView = ImageView(requireContext())
             imgView.setOnClickListener(this)
             imgView.layoutParams = params
@@ -50,7 +50,7 @@ class LettersFragment : Fragment(R.layout.fragment_letters), View.OnClickListene
             imgView.setImageResource(resources.getIdentifier("letter$i", "drawable", requireContext().packageName))
             ll2.addView(imgView)
         }
-        for (i in 17..24){
+        for (i in 17..24) {
             val imgView = ImageView(requireContext())
             imgView.setOnClickListener(this)
             imgView.layoutParams = params
@@ -58,7 +58,7 @@ class LettersFragment : Fragment(R.layout.fragment_letters), View.OnClickListene
             imgView.setImageResource(resources.getIdentifier("letter$i", "drawable", requireContext().packageName))
             ll3.addView(imgView)
         }
-        for (i in 25..32){
+        for (i in 25..32) {
             val imgView = ImageView(requireContext())
             imgView.setOnClickListener(this)
             imgView.layoutParams = params
@@ -66,7 +66,7 @@ class LettersFragment : Fragment(R.layout.fragment_letters), View.OnClickListene
             imgView.setImageResource(resources.getIdentifier("letter$i", "drawable", requireContext().packageName))
             ll4.addView(imgView)
         }
-        for (i in 33..34){
+        for (i in 33..34) {
             val imgView = ImageView(requireContext())
             imgView.setOnClickListener(this)
             imgView.layoutParams = params

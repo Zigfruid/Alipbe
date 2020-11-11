@@ -21,7 +21,6 @@ import kotlinx.coroutines.launch
 import nl.dionsegijn.konfetti.models.Shape
 import nl.dionsegijn.konfetti.models.Size
 
-
 class SecondGameFragment : Fragment(R.layout.fragment_second_game), View.OnDragListener {
 
     companion object {
@@ -106,7 +105,6 @@ class SecondGameFragment : Fragment(R.layout.fragment_second_game), View.OnDragL
         }
         flAnswer.setOnDragListener(this)
     }
-
 
     override fun onDrag(v: View?, event: DragEvent?): Boolean {
         when (event?.action) {
