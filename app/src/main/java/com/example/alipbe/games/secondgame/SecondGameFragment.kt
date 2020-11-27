@@ -41,7 +41,8 @@ class SecondGameFragment : Fragment(R.layout.fragment_second_game), View.OnDragL
     }
 
     private fun divider() {
-        val st = items[random]
+        random = 17
+        val st = items[random].toUpperCase()
         imgQuestion.setImageResource(
             resources.getIdentifier(
                 "letter_${random + 1}",
