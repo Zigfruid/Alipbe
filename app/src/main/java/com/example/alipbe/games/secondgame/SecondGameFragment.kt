@@ -3,6 +3,7 @@ package com.example.alipbe.games.secondgame
 import android.annotation.SuppressLint
 import android.graphics.Color
 import android.os.Bundle
+import android.print.PrintAttributes
 import android.util.DisplayMetrics
 import android.view.DragEvent
 import android.view.MotionEvent
@@ -10,6 +11,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.FrameLayout
+import android.widget.LinearLayout
+import androidx.core.view.marginTop
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.example.alipbe.DataHolder
@@ -22,6 +25,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import nl.dionsegijn.konfetti.models.Shape
 import nl.dionsegijn.konfetti.models.Size
+
 
 class SecondGameFragment : Fragment(R.layout.fragment_second_game), View.OnDragListener {
 
@@ -71,6 +75,7 @@ class SecondGameFragment : Fragment(R.layout.fragment_second_game), View.OnDragL
             dynamicButton.textSize = TEXT_SIZE
             dynamicButton.setTextColor(Color.WHITE)
             dynamicButton.setBackgroundResource(R.drawable.ic_btn5)
+
             dynamicButton.layoutParams = FrameLayout.LayoutParams(
                 50.dp,
                 50.dp
@@ -82,12 +87,12 @@ class SecondGameFragment : Fragment(R.layout.fragment_second_game), View.OnDragL
             val x1 = 800
             if (x / x1 >= 2) {
                 dynamicButton.x = (0..1700).random().toFloat()
-                dynamicButton.y = (0..400).random().toFloat()
+                dynamicButton.y = (0..200).random().toFloat()
             } else {
-                dynamicButton.x = (0..800).random().toFloat()
-                dynamicButton.y = (0..100).random().toFloat()
+                dynamicButton.x = (0..400).random().toFloat()
+                dynamicButton.y = (0..50).random().toFloat()
             }
-            var listener = View.OnTouchListener(function = {view, motionEvent ->
+            val listener = View.OnTouchListener(function = { view, motionEvent ->
 
                 if (motionEvent.action == MotionEvent.ACTION_DOWN) {
                     val dragShadowBuilder = View.DragShadowBuilder(view)

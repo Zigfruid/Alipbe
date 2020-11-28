@@ -45,11 +45,13 @@
         app:layout_constraintVertical_bias="0.3"
         app:layout_constraintVertical_chainStyle="packed" />
 
-    <FrameLayoutLayout
+    <FrameLayout
         android:id="@+id/flAnswer"
         android:layout_width="@dimen/match_constraint"
         android:layout_height="@dimen/match_constraint"
         android:tag="layout"
+        android:minHeight="10dp"
+        android:minWidth="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
