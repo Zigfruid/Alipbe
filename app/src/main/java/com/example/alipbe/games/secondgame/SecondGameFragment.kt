@@ -1,9 +1,11 @@
 package com.example.alipbe.games.secondgame
 
+import android.annotation.SuppressLint
 import android.graphics.Color
 import android.os.Bundle
 import android.util.DisplayMetrics
 import android.view.DragEvent
+import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
@@ -40,6 +42,7 @@ class SecondGameFragment : Fragment(R.layout.fragment_second_game), View.OnDragL
         }
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     private fun divider() {
         val st = items[random]
         imgQuestion.setImageResource(
@@ -84,12 +87,24 @@ class SecondGameFragment : Fragment(R.layout.fragment_second_game), View.OnDragL
                 dynamicButton.x = (0..800).random().toFloat()
                 dynamicButton.y = (0..100).random().toFloat()
             }
-            dynamicButton.setOnLongClickListener {
+            var listener = View.OnTouchListener(function = {view, motionEvent ->
+
+                if (motionEvent.action == MotionEvent.ACTION_DOWN) {
+                    val dragShadowBuilder = View.DragShadowBuilder(view)
+                    view.startDragAndDrop(null, dragShadowBuilder, view, 0)
+                    view.visibility = View.VISIBLE/*
+                    view.y = motionEvent.rawY - view.height/2
+                    view.x = motionEvent.rawX - view.width/2*/
+                }
+                true
+            })
+            dynamicButton.setOnTouchListener(listener)
+            /*dynamicButton.setOnLongClickListener {
                 val dragShadowBuilder = View.DragShadowBuilder(it)
                 it.startDragAndDrop(null, dragShadowBuilder, it, 0)
                 it.visibility = View.VISIBLE
                 true
-            }
+            }*/
             flAnswer.addView(dynamicButton)
             val dynamicBtn = Button(requireContext())
             dynamicBtn.id = i
