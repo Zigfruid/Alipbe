@@ -87,10 +87,10 @@ class SecondGameFragment : Fragment(R.layout.fragment_second_game), View.OnDragL
             val x1 = 800
             if (x / x1 >= 2) {
                 dynamicButton.x = (0..1700).random().toFloat()
-                dynamicButton.y = (0..200).random().toFloat()
+                dynamicButton.y = (0..400).random().toFloat()
             } else {
-                dynamicButton.x = (0..400).random().toFloat()
-                dynamicButton.y = (0..50).random().toFloat()
+                dynamicButton.x = (0..800).random().toFloat()
+                dynamicButton.y = (0..100).random().toFloat()
             }
             val listener = View.OnTouchListener(function = { view, motionEvent ->
 
