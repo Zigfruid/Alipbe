@@ -3,7 +3,6 @@ package com.example.alipbe.games.secondgame
 import android.annotation.SuppressLint
 import android.graphics.Color
 import android.os.Bundle
-import android.print.PrintAttributes
 import android.util.DisplayMetrics
 import android.view.DragEvent
 import android.view.MotionEvent
@@ -11,8 +10,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.FrameLayout
-import android.widget.LinearLayout
-import androidx.core.view.marginTop
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.example.alipbe.DataHolder
@@ -25,7 +22,6 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import nl.dionsegijn.konfetti.models.Shape
 import nl.dionsegijn.konfetti.models.Size
-
 
 class SecondGameFragment : Fragment(R.layout.fragment_second_game), View.OnDragListener {
 
@@ -159,7 +155,7 @@ class SecondGameFragment : Fragment(R.layout.fragment_second_game), View.OnDragL
                         viewKonfetti.build()
                             .addColors(Color.YELLOW, Color.GREEN, Color.MAGENTA)
                             .setDirection(0.0, 359.0)
-                            .setSpeed(5f, 10f)
+                            .setSpeed(2f, 5f)
                             .setFadeOutEnabled(true)
                             .setTimeToLive(1000L)
                             .addShapes(Shape.Square, Shape.Circle)

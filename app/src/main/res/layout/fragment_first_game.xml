@@ -6,17 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".games.firstgame.FirstGameFragment">
 
-    <nl.dionsegijn.konfetti.KonfettiView
-        android:id="@+id/viewKonfettiFG"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
     <ImageView
         android:id="@+id/ivTheme"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/game_back_ground"
+        android:src="@drawable/game2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -32,7 +27,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="30dp"
         app:layout_constraintVertical_bias="0.5"
         app:layout_constraintVertical_chainStyle="packed">
 
@@ -66,7 +60,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="160dp"
         app:layout_constraintTop_toBottomOf="@id/linearLayout1">
 
         <Button
@@ -114,10 +107,15 @@
         android:id="@+id/btnRefreshSound"
         android:layout_width="30dp"
         android:layout_height="30dp"
+        android:layout_margin="16dp"
         android:src="@drawable/ic_baseline_volume_up"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_margin="16dp"/>
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <nl.dionsegijn.konfetti.KonfettiView
+        android:id="@+id/viewKonfettiFG"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

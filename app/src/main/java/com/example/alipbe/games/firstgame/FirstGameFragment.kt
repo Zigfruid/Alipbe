@@ -108,17 +108,17 @@ class FirstGameFragment : Fragment(R.layout.fragment_first_game), View.OnClickLi
             tvAnswer.text = arr[res]
             tvAnswer.visibility = View.VISIBLE
             val myAnim: Animation = AnimationUtils.loadAnimation(requireContext(), R.anim.logo_anim)
-            tvAnswer.startAnimation(myAnim)
             viewKonfettiFG.build()
                 .addColors(Color.YELLOW, Color.GREEN, Color.MAGENTA)
                 .setDirection(0.0, 359.0)
                 .setSpeed(1f, 5f)
                 .setFadeOutEnabled(true)
-                .setTimeToLive(2000L)
+                .setTimeToLive(1000L)
                 .addShapes(Shape.Square, Shape.Circle)
                 .addSizes(Size(12))
                 .setPosition(-50f, viewKonfettiFG.width + 50f, -50f, -50f)
-                .streamFor(300, 5000L)
+                .streamFor(300, 2000L)
+            tvAnswer.startAnimation(myAnim)
             GlobalScope.launch {
                 delay(TIME.toLong())
                 activity?.runOnUiThread {
