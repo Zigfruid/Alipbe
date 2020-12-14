@@ -1,5 +1,6 @@
 package com.example.alipbe.games.firstgame
 
+import android.graphics.Color
 import android.media.AudioAttributes
 import android.media.SoundPool
 import android.os.Bundle
@@ -14,9 +15,12 @@ import java.util.Arrays
 import java.util.Random
 import kotlin.collections.ArrayList
 import kotlinx.android.synthetic.main.fragment_first_game.*
+import kotlinx.android.synthetic.main.fragment_second_game.*
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import nl.dionsegijn.konfetti.models.Shape
+import nl.dionsegijn.konfetti.models.Size
 
 class FirstGameFragment : Fragment(R.layout.fragment_first_game), View.OnClickListener {
 
@@ -58,6 +62,15 @@ class FirstGameFragment : Fragment(R.layout.fragment_first_game), View.OnClickLi
             resources.getIdentifier("l$res", "raw", activity?.packageName),
             1
         )
+
+        btnRefreshSound.setOnClickListener {
+            soundPool.load(
+                requireContext(),
+                resources.getIdentifier("l$res", "raw", activity?.packageName),
+                1
+            )
+        }
+
         generateWrongAnswer(btnAnswer1)
         generateWrongAnswer(btnAnswer2)
         generateWrongAnswer(btnAnswer3)
@@ -94,6 +107,16 @@ class FirstGameFragment : Fragment(R.layout.fragment_first_game), View.OnClickLi
             tvAnswer.text = arr[res]
             tvAnswer.visibility = View.VISIBLE
             val myAnim: Animation = AnimationUtils.loadAnimation(requireContext(), R.anim.logo_anim)
+            viewKonfettiFG.build()
+                .addColors(Color.YELLOW, Color.GREEN, Color.MAGENTA)
+                .setDirection(0.0, 359.0)
+                .setSpeed(1f, 5f)
+                .setFadeOutEnabled(true)
+                .setTimeToLive(1000L)
+                .addShapes(Shape.Square, Shape.Circle)
+                .addSizes(Size(12))
+                .setPosition(-50f, viewKonfettiFG.width + 50f, -50f, -50f)
+                .streamFor(300, 2000L)
             tvAnswer.startAnimation(myAnim)
             GlobalScope.launch {
                 delay(TIME.toLong())
