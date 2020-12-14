@@ -44,7 +44,6 @@ class SecondGameFragment : Fragment(R.layout.fragment_second_game), View.OnDragL
 
     @SuppressLint("ClickableViewAccessibility")
     private fun divider() {
-        random = 17
         val st = items[random].toUpperCase()
         imgQuestion.setImageResource(
             resources.getIdentifier(
