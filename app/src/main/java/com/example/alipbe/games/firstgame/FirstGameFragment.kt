@@ -79,7 +79,6 @@ class FirstGameFragment : Fragment(R.layout.fragment_first_game), View.OnClickLi
             1 -> {
                 btnAnswer1.text = arr[res]
                 btnAnswer1.setBackgroundResource(R.drawable.background_green)
-
             }
             2 -> {
                 btnAnswer2.text = arr[res]
