@@ -93,19 +93,11 @@ class SecondGameFragment : Fragment(R.layout.fragment_second_game), View.OnDragL
                 if (motionEvent.action == MotionEvent.ACTION_DOWN) {
                     val dragShadowBuilder = View.DragShadowBuilder(view)
                     view.startDragAndDrop(null, dragShadowBuilder, view, 0)
-                    view.visibility = View.VISIBLE/*
-                    view.y = motionEvent.rawY - view.height/2
-                    view.x = motionEvent.rawX - view.width/2*/
+                    view.visibility = View.VISIBLE
                 }
                 true
             })
             dynamicButton.setOnTouchListener(listener)
-            /*dynamicButton.setOnLongClickListener {
-                val dragShadowBuilder = View.DragShadowBuilder(it)
-                it.startDragAndDrop(null, dragShadowBuilder, it, 0)
-                it.visibility = View.VISIBLE
-                true
-            }*/
             flAnswer.addView(dynamicButton)
             val dynamicBtn = Button(requireContext())
             dynamicBtn.id = i
