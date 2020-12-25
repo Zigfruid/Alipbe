@@ -1,4 +1,4 @@
-package com.example.alipbe
+package com.agames.alipbe
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

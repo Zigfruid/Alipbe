@@ -1,4 +1,4 @@
-package com.example.alipbe.letters
+package com.agames.alipbe.letters
 
 import android.os.Bundle
 import android.util.DisplayMetrics
@@ -8,8 +8,8 @@ import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import com.example.alipbe.R
-import com.example.alipbe.dp
+import com.agames.alipbe.R
+import com.agames.alipbe.dp
 import kotlinx.android.synthetic.main.fragment_letters.*
 
 class LettersFragment : Fragment(R.layout.fragment_letters), View.OnClickListener {

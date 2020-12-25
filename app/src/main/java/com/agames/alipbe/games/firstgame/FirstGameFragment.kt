@@ -1,4 +1,4 @@
-package com.example.alipbe.games.firstgame
+package com.agames.alipbe.games.firstgame
 
 import android.graphics.Color
 import android.media.AudioAttributes
@@ -9,13 +9,12 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.Button
 import androidx.fragment.app.Fragment
-import com.example.alipbe.DataHolder
-import com.example.alipbe.R
+import com.agames.alipbe.DataHolder
+import com.agames.alipbe.R
 import java.util.Arrays
 import java.util.Random
 import kotlin.collections.ArrayList
 import kotlinx.android.synthetic.main.fragment_first_game.*
-import kotlinx.android.synthetic.main.fragment_second_game.*
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch

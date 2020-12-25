@@ -1,4 +1,4 @@
-package com.example.alipbe.games.secondgame
+package com.agames.alipbe.games.secondgame
 
 import android.annotation.SuppressLint
 import android.graphics.Color
@@ -12,10 +12,10 @@ import android.widget.Button
 import android.widget.FrameLayout
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
-import com.example.alipbe.DataHolder
-import com.example.alipbe.R
-import com.example.alipbe.dp
-import com.example.alipbe.dpToSp
+import com.agames.alipbe.DataHolder
+import com.agames.alipbe.R
+import com.agames.alipbe.dp
+import com.agames.alipbe.dpToSp
 import kotlinx.android.synthetic.main.fragment_second_game.*
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay

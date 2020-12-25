@@ -6,7 +6,7 @@
     app:startDestination="@id/mainFragment">
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.example.alipbe.main.MainFragment"
+        android:name="com.agames.alipbe.main.MainFragment"
         android:label="MainFragment">
         <action
             android:id="@+id/action_mainFragment_to_lettersFragment"
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/lettersFragment"
-        android:name="com.example.alipbe.letters.LettersFragment"
+        android:name="com.agames.alipbe.letters.LettersFragment"
         android:label="LettersFragment">
         <action
             android:id="@+id/action_lettersFragment_to_oneLetterFragment"
@@ -37,7 +37,7 @@
     </fragment>
     <fragment
         android:id="@+id/oneLetterFragment"
-        android:name="com.example.alipbe.letters.alphabet.OneLetterFragment"
+        android:name="com.agames.alipbe.letters.alphabet.OneLetterFragment"
         android:label="OneLetterFragment">
         <argument
             android:name="letterId"
@@ -45,7 +45,7 @@
     </fragment>
     <fragment
         android:id="@+id/gameMenuFragment"
-        android:name="com.example.alipbe.games.GameMenuFragment"
+        android:name="com.agames.alipbe.games.GameMenuFragment"
         android:label="GameMenuFragment">
         <action
             android:id="@+id/action_gameMenuFragment_to_firstGameFragment"
@@ -64,11 +64,11 @@
     </fragment>
     <fragment
         android:id="@+id/firstGameFragment"
-        android:name="com.example.alipbe.games.firstgame.FirstGameFragment"
+        android:name="com.agames.alipbe.games.firstgame.FirstGameFragment"
         android:label="fragment_first_game"
         tools:layout="@layout/fragment_first_game" />
     <fragment
         android:id="@+id/gameFragment2"
-        android:name="com.example.alipbe.games.secondgame.SecondGameFragment"
+        android:name="com.agames.alipbe.games.secondgame.SecondGameFragment"
         android:label="GameFragment2" />
 </navigation>

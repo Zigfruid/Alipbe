@@ -1,11 +1,11 @@
-package com.example.alipbe.main
+package com.agames.alipbe.main
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import com.example.alipbe.R
+import com.agames.alipbe.R
 import kotlinx.android.synthetic.main.fragment_main.*
 
 class MainFragment : Fragment(R.layout.fragment_main) {

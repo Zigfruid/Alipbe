@@ -1,4 +1,4 @@
-package com.example.alipbe
+package com.agames.alipbe
 
 import android.content.Context
 import android.content.res.Resources

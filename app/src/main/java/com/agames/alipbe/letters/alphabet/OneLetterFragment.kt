@@ -1,4 +1,4 @@
-package com.example.alipbe.letters.alphabet
+package com.agames.alipbe.letters.alphabet
 
 import android.media.AudioAttributes
 import android.media.SoundPool
@@ -7,7 +7,7 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.navArgs
-import com.example.alipbe.R
+import com.agames.alipbe.R
 import kotlinx.android.synthetic.main.fragment_one_letter.*
 
 class OneLetterFragment : Fragment(R.layout.fragment_one_letter) {
